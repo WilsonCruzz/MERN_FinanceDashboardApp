@@ -1,3 +1,4 @@
+import BoxHeader from '@/conponents/BoxHeader';
 import DashboardBox from '@/conponents/DashboardBox';
 import {useGetKpisQuery} from '@/state/api';
 import { useTheme } from '@mui/material';
@@ -33,6 +34,10 @@ const revenueExpenses = useMemo(() => {
   return (
     <>
     <DashboardBox gridArea="a">
+      <BoxHeader 
+      title="Revenue and Expenses"
+      subtitle='top line represents revenue, bottom line represents expenses'
+      sideText='+4%' />
     <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={500}
